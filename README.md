@@ -1,41 +1,42 @@
-# 🏦 Credit Risk Scoring - Loan Default Prediction
+# 💳 Credit Risk Scoring Using UCI Credit Card Default Dataset
 
-This project demonstrates a complete data analytics and machine learning pipeline for credit risk scoring. We use the XGBoost model to predict the likelihood of a loan applicant defaulting based on financial and demographic features.
+This project demonstrates an end-to-end process for credit default prediction using XGBoost on the UCI Default of Credit Card Clients dataset.
 
 ## 📁 Dataset
-- Sample dataset: `credit_data.csv`
-- Features: Income, employment, loan amount, credit score, purpose, etc.
-- Target: `loan_status` (e.g., Fully Paid / Default)
+- Source: [UCI Repository](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients)
+- Records: 30,000
+- Features: Demographic info, payment history, bill amounts, previous payments
+- Target: `default` (1 = defaulted, 0 = paid)
 
-## 🧰 Technologies Used
+## 🛠️ Technologies Used
 - Python 3.x
 - pandas, numpy, matplotlib, seaborn
-- scikit-learn, xgboost
-- Jupyter Notebook or VS Code
+- scikit-learn
+- xgboost
+- Jupyter Notebook or any Python IDE
 
-## 🧠 Problem Statement
-Given a dataset of past loans, predict whether a new applicant is likely to default on the loan.
+## 🧠 Project Workflow
+1. Data Loading & Cleaning
+2. Exploratory Data Analysis (EDA)
+3. Advanced Feature Analysis
+4. Train/Test Split
+5. Modeling with XGBoost
+6. Evaluation Metrics & Feature Importance
+7. Business Recommendations
 
-## 🚀 How to Run
+## 📌 How to Run
 ```bash
-# Clone the repo
-$ git clone https://github.com/yourusername/credit-risk-scoring.git
-$ cd credit-risk-scoring
+# Clone the repository
+$ git clone https://github.com/yourusername/credit-risk-xgboost.git
+$ cd credit-risk-xgboost
 
 # Install dependencies
 $ pip install -r requirements.txt
 
-# Run the notebook or script
-$ jupyter notebook Credit_Risk_Scoring.ipynb
+# Run the notebook
+$ jupyter notebook
 ```
 
-## 📈 Key Results
-- Model Used: XGBoost
-- Accuracy: ~85% (varies by data)
-- Most important features: Credit Score, Income, Loan Amount, Employment
-
-## 💡 Recommended Models for Credit Risk
-- XGBoost (used here)
-- Logistic Regression (baseline)
-- LightGBM (similar to XGBoost)
-- Random Forest
+## 📈 Results
+- Accuracy: ~81%
+- Important Features: PAY_0, LIMIT_BAL, AGE, PAY_AMT1, BILL_AMT1
